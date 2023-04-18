@@ -1,0 +1,27 @@
+﻿@model ProductViewModel
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+<h1>Products:</h1>
+
+<ul>
+   @foreach (Product item in Model.Products)
+    {
+        <li>@item.Name - @item.Price</li>
+    }
+</ul>
+
+<h1>Brands:</h1>
+
+<ul>
+@foreach (var item in Model.Brands)
+{
+    <li>@item.Name</li>
+}
+</ul>
+
+
+
+
